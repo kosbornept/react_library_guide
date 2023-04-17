@@ -10,6 +10,11 @@ import DataGrid from 'react-data-grid';
 // React Router DOM
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, Link } from 'react-router-dom';
 
+// DatePicker
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
 // DataGrid
 const columns = [
   { key: 'id', name: 'ID' },
@@ -62,6 +67,7 @@ function App() {
         </p>
       </header>
       <main className='App-main'>
+
         {/* Article Template */}
         {/* <article>
           <h2></h2>
@@ -71,6 +77,7 @@ function App() {
           <h3></h3>
           <span></span>
         </article> */}
+
         <article className='Article-odd'>
           <h2>React Router Dom</h2>
           <a className='App-link' href='https://reactrouter.com/en/main' target='_'>Link</a>
@@ -83,6 +90,7 @@ function App() {
             </RouterProvider>
           </span>
         </article>
+
         <article className='Article-even'>
           <h2>React Type Animation</h2>
           <a className='App-link' href='https://react-type-animation.netlify.app/' target='_'>Link</a>
@@ -107,6 +115,7 @@ function App() {
             />
           </span>
         </article>
+
         <article className='Article-odd'>
           <h2>React Data Grid</h2>
           <a className='App-link' href='https://github.com/adazzle/react-data-grid' target='_'>Link</a>
@@ -115,6 +124,20 @@ function App() {
           <h3>Example</h3>
           <span><DataGrid style={{ display: 'grid', gridTemplateColumns: 30, height: 'fit-content' }} columns={columns} rows={rows} /></span>
         </article>
+
+        <article className='Article-even'>
+          <h2>React DatePicker</h2>
+          <a className='App-link' href='https://mui.com/x/react-date-pickers/getting-started/' target='_'>Link</a>
+          <h3>Installation</h3>
+          <code>npm install @mui/x-date-pickers</code>
+          <h3>Example</h3>
+          <span>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker format="DD-MM-YYYY" className='datePicker'/>
+          </LocalizationProvider>
+          </span>
+        </article>
+
       </main>
     </div>
   );
