@@ -7,9 +7,6 @@ import { TypeAnimation } from 'react-type-animation';
 import 'react-data-grid/lib/styles.css';
 import DataGrid from 'react-data-grid';
 
-// React Router DOM
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, Link } from 'react-router-dom';
-
 // DatePicker
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -24,25 +21,6 @@ const columns = [
   { key: 'year', name: 'Year' },
   { key: 'review', name: 'Review' }
 ];
-
-// React Router DOM
-const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={
-    <ul style={{ listStyle: 'none', padding: 0 }}>
-      <li>
-          <Link target='_' to='https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aGVsbG98ZW58MHx8MHx8&w=1000&q=80' className={ 'App-link'}>
-            Hello
-          </Link>
-        </li>
-        <li>
-          <Link target='_' to='https://static.vecteezy.com/system/resources/previews/002/221/988/original/glowing-neon-line-earth-globe-icon-isolated-on-brick-wall-background-vector.jpg' className={ 'App-link'}>
-            World
-          </Link>
-        </li>
-    </ul>
-  }>
-  </Route>
-));
 
 const rows = [
   { id: 0, title: '1984', author: 'George Orwell', publisher: 'Secker & Warburg', year: '1949', review: '4.5'},
@@ -85,9 +63,7 @@ function App() {
           <code>npm install react-router-dom</code>
           <h3>Example</h3>
           <span>
-            <RouterProvider router={router}>
-
-            </RouterProvider>
+            Due to the nature of the library, it's difficult to show an example. However, it's power can be understood through the tutorial which can be found <a href='https://reactrouter.com/en/main/start/tutorial' target='_'>here</a>.
           </span>
         </article>
 
